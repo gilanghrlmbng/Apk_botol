@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Depot_air</string>
+    <string name="title_activity_home">MainActivity</string>
+    <string name="title_botol">Botol</string>
+    <string name="title_order">order</string>
+    <string name="title_notifications">Notifications</string>
+</resources>

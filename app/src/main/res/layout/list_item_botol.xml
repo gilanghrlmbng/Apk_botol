@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:elevation="8dp"
+        app:cardCornerRadius="8dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/gambarbotol"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_margin="10dp"
+                android:layout_marginEnd="10dp"/>
+
+            <TextView
+                android:id="@+id/merk_botol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/gambarbotol"
+                android:fontFamily="@font/black_ops_one"
+                android:layout_marginTop="15dp"/>
+
+            <TextView
+                android:id="@+id/harga_botol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ukuran_botol"
+                android:layout_alignStart="@+id/merk_botol"
+                android:fontFamily="@font/black_ops_one" />
+
+            <TextView
+                android:id="@+id/ukuran_botol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/merk_botol"
+                android:layout_below="@+id/merk_botol"
+                android:fontFamily="@font/black_ops_one"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/buttondelete"
+                android:layout_below="@+id/harga_botol"
+                android:layout_alignStart="@+id/merk_botol"
+                android:text="Delete"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/black_ops_one"/>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
