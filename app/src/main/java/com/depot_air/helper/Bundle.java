@@ -6,4 +6,8 @@ public final class Bundle {
     public static final String BUNDLE_UKURAN = "string_extra_ukuran";
     public static final String BUNDLE_HARGA = "string_extra_harga";
     public static final String BUNDLE_GAMBAR = "string_extra_gambar";
+    public static final String SHARED_INIT = "shared_init";
+    public static final String SHARED_PRE_UNAME = "nama_user";
+    public static final String SHARED_PRE_EMAIL = "email_user";
+
 }

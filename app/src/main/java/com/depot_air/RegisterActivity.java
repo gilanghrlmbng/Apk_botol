@@ -3,6 +3,7 @@ package com.depot_air;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -24,6 +25,8 @@ public class RegisterActivity extends AppCompatActivity{
     private String TAG = "retrofit";
     Button signup;
     TextView login;
+    SharedPreferences sharedPreferences;
+    SharedPreferences.Editor editor;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,12 +38,14 @@ public class RegisterActivity extends AppCompatActivity{
         login=findViewById(R.id.txtlogin);
         signup=findViewById(R.id.btnsignup);
         confirmpw = findViewById(R.id.confirmpw);
+        sharedPreferences = getSharedPreferences(com.depot_air.helper.Bundle.SHARED_INIT,MODE_PRIVATE);
 
         signup.setOnClickListener(v -> {
             if (pw.getText().toString().trim().equals(confirmpw.getText().toString().trim())){
+                editor = sharedPreferences.edit();
                 postRegister(uname.getText().toString().trim(),mail.getText().toString().trim(),pw.getText().toString().trim());
                 startActivity(new Intent(getApplicationContext(),HomeActivity.class));
-                Intent intent = new Intent(RegisterActivity.this,HomeActivity.class);
+
             }else{
                 Toast.makeText(this, "Password salah silahkan di input ulang", Toast.LENGTH_SHORT).show();
             }
@@ -60,6 +65,9 @@ public class RegisterActivity extends AppCompatActivity{
                                            Response<ResponseErrorModel> response) {
                         if (response.isSuccessful()) {
                             Log.d(TAG, "onResponse: SUKSES > " + response.body());
+                            editor.putString(com.depot_air.helper.Bundle.SHARED_PRE_UNAME,username);
+                            editor.putString(com.depot_air.helper.Bundle.SHARED_PRE_EMAIL,email);
+                            editor.apply();
                         }
                     }
                     @Override

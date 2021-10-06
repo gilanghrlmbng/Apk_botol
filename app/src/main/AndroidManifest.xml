@@ -13,7 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Depot_air"
         android:usesCleartextTraffic="true">
-        <activity android:name=".UpdateBotol"></activity>
+        <activity android:name=".OnBoarding"></activity>
+        <activity android:name=".UpdateBotol" />
         <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,7 +22,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RegisterActivity"></activity>
+        <activity android:name=".RegisterActivity" />
         <activity
             android:name=".HomeActivity"
             android:label="@string/title_activity_home" />

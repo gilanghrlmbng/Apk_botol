@@ -4,4 +4,18 @@
     <string name="title_botol">Botol</string>
     <string name="title_order">order</string>
     <string name="title_notifications">Notifications</string>
+
+    <string name="first_slide_title">Belanja dengan mudah</string>
+    <string name="third_slide_title">Banyak diskon dan hadiah</string>
+    <string name="second_slide_title">Catat Transaksi belanja yang lengkap dan detail</string>
+    <string name="fourth_slide_title">Sit Back And Enjoy</string>
+
+    <string name="first_slide_desc">belanja dengan cara mudah seperti di E-Commerce dunia</string>
+    <string name="third_slide_desc">Dapatkan dan kejar diskon dan hadiah menarik setiap hari ketika berbelanja</string>
+    <string name="second_slide_desc">Pelanggan dapat melihat riwayat transaksi yang sangat mendetail dan mudah dibaca</string>
+    <string name="fourth_slide_desc">We will handle everything for you. As you have the app in your pocket then you don\'t have to worry about anything.  </string>
+    <!--Buttons-->
+    <string name="skip_btn">Skip</string>
+    <string name="next_btn">Next</string>
+    <string name="let_get_started">Lets Get Started</string>
 </resources>
